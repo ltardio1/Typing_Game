@@ -71,6 +71,7 @@ $(function() {
             $("#arrowR").show();
             // now the user has started the game initialization
             document.getElementById("usertext").onclick = function(event) {
+                $("#info").hide();
                 $("#arrowL").hide();
                 $("#arrowR").hide();
                 $("#difficult").hide();
