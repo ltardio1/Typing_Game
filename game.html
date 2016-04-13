@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GAME</title>
+	<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="js/game.js"></script>
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/game.css">
+	<meta charset="UTF-8">
+	<!-- telling IE to use the latest rendering engine -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- set the page width to the size of device and zoom level to 1 -->
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id="gamecontainer">
+
+		<!-- button to link to info below -->
+		<div id="info"><button id="word" class= "btn-primary btn-lg">Click for Info</button></div>
+
+		<!-- intro/game info	 -->
+		<div id="intro" class= "animated infinite pulse">
+		<!-- <div id="background"></div> -->
+
+			<h1 id="inner">This game will test your typing ability.<hr/>You must type exactly what you see in order to earn points.<hr/>Speed and accuracy are critical.<hr/>There are 2 difficulties - Easy and Hard.<hr/>Click 'OK' to proceed.</h1> 
+			<button id="ok" class= "btn-primary btn-lg">OK</button>
+		</div>
+
+		<!-- countdown divs -->
+		<div id="counting3">3</div>
+		<div id="counting2">2</div>
+		<div id="counting1">1</div>
+	
+	<!-- section for player 1's name -->	
+		<div id="difficult" class= "animated bounceInRight">
+			<!-- the box where player 1 types his name -->
+			<input id="input-box2" type="text"></input>
+			<!-- the button he uses to click and add his name -->
+			<button id="submit-name2" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Name</button>
+			<h2>Hard</h2>
+			<ul id="players2">
+				
+			</ul>
+		</div>
+
+		<div id="choose-level" class= "animated slideInDown">
+			<img id="pickL" src="./css/images/left-arrow-choose.gif" />
+			<img id="pickR" src="./css/images/right-arrow-choose.gif" />
+			<h1>Choose a level and add your name to begin</h1>
+		</div>
+
+		<!-- section for player 1's name -->	
+		<div id="normal" class= "animated bounceInLeft">
+			<!-- the box where player 1 types his name -->
+			<input id="input-box" type="text"></input>
+				
+			<!-- the button he uses to click and add his name -->
+			<button id="submit-name" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Name</button>
+			<h2>Easy</h2>
+			<ul id="players">
+				
+			</ul>
+		</div>
+
+		<div id="gameboard">
+
+			<!-- div containing score and time -->
+			<div id="timeandscore">
+				<div id="score">
+					<h2 class="title">Score</h2>
+					<span id="accuracyScore"></span><br/>
+					<span id="result"></span>
+				</div>
+				<hr/>
+				<!-- div for timer -->
+				<div id="timer">
+					<h2 class="title">Time<h2>
+				 	<span id="elapsedtime"></span>
+				</div>
+			</div>
+
+			<!-- div for the rendered text for the easy game -->
+			<div id="textcontainer" class= "animated bounceInRight">
+				<p id="pagetext">
+					<div id="first" class= "animated bounceInRight">Bacon alcatra capicola landjaeger.</div>
+					<div id="second" class="animated bounceInRight">Ham hock biltong pastrami kielbasa ball tip pig.</div>
+					<div id="third" class= "animated bounceInRight">Andouille boudin sausage, drumstick pork loin filet mignon beef ribs prosciutto tenderloin. </div>
+					<div id="fourth" class= "animated bounceInRight">Bacon ipsum dolor amet turkey landjaeger shoulder doner ham hock biltong prosciutto capicola. Ham hock biltong pastrami.</div>
+				</p>
+			</div>
+
+			<!-- div for the rendered text for the hard game -->
+			<div id="textcontainer2">
+				<p id="pagetext2"></p>
+			</div>
+
+		</div>
+		<!-- close gameboard -->
+
+		<img id="arrowR" class= "animated slideInLeft" src="./css/images/right-arrow-37.gif" />
+		<div id="inputfield">
+			<textarea id="usertext" name="body" rows="8" cols="40" placeholder="CLick to Begin"></textarea></br>
+		</div>
+		<img id="arrowL" class= "animated slideInRight" src="./css/images/left-arrow-22.gif" />
+	</div>
+			<!-- close gamecontainer -->
+</body>
+</html>
